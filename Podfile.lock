@@ -1,0 +1,14 @@
+PODS:
+  - IRFEmojiCheatSheet (0.3.0)
+
+DEPENDENCIES:
+  - IRFEmojiCheatSheet (from `git@github.com:neonichu/IRFEmojiCheatSheet.git`)
+
+EXTERNAL SOURCES:
+  IRFEmojiCheatSheet:
+    :git: git@github.com:neonichu/IRFEmojiCheatSheet.git
+
+SPEC CHECKSUMS:
+  IRFEmojiCheatSheet: 88536eccaa3d994a8300063ea4b9cfc245561df5
+
+COCOAPODS: 0.34.4

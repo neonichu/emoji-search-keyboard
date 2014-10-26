@@ -27,6 +27,7 @@
 		4EF16F9819D255030076AFCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF16F9519D255030076AFCB /* ViewController.swift */; };
 		4EF16F9B19D2550D0076AFCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */; };
 		4EF16F9F19D2552E0076AFCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF16F9D19D2552E0076AFCB /* Main.storyboard */; };
+		A1D091EA19FBD82D00DE10E1 /* EmojiBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D091E919FBD82D00DE10E1 /* EmojiBoard.swift */; };
 		BE9771C96D98B06748D2C241 /* libPods-Keyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B98DBE1656068ABE327D50FE /* libPods-Keyboard.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		4EF16F9519D255030076AFCB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF16F9E19D2552E0076AFCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		A1D091E919FBD82D00DE10E1 /* EmojiBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiBoard.swift; sourceTree = "<group>"; };
 		A1D091EB19FBDC6800DE10E1 /* Foo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Foo.playground; sourceTree = "<group>"; };
 		A1D091EC19FBE55900DE10E1 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		A7958D7D4854797039714FA4 /* Pods-Keyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keyboard/Pods-Keyboard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				4E6AEE4B19D246D700931E8F /* Catboard.swift */,
 				4EEFD78819E0DC6B004D4974 /* CatboardBanner.swift */,
+				A1D091E919FBD82D00DE10E1 /* EmojiBoard.swift */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				4EC2A46E19DF811E00F789E1 /* KeyboardLayout.swift in Sources */,
 				4E60A13A1979FA5C00854CC8 /* KeyboardKeyBackground.swift in Sources */,
 				4E5B67A2196E03B700114361 /* KeyboardModel.swift in Sources */,
+				A1D091EA19FBD82D00DE10E1 /* EmojiBoard.swift in Sources */,
 				4E60A13C1979FA8E00854CC8 /* KeyboardConnector.swift in Sources */,
 				4EC2A46F19DF811E00F789E1 /* KeyboardViewControllerExtendableMethods.swift in Sources */,
 				4E00A6E5197183EE009414F2 /* KeyboardKey.swift in Sources */,

@@ -106,6 +106,7 @@ class EmojiBoard: KeyboardViewController {
 
             if currentChar == " " {
                 deleteCurrentWord()
+                textDocumentProxy.deleteBackward()
 
                 let repl = IRFEmojiCheatSheet.stringByReplacingEmojiAliasesInString(currentWord)
                 insertWord(repl)

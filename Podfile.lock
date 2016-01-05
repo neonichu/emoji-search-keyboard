@@ -8,7 +8,12 @@ EXTERNAL SOURCES:
   IRFEmojiCheatSheet:
     :git: git@github.com:neonichu/IRFEmojiCheatSheet.git
 
-SPEC CHECKSUMS:
-  IRFEmojiCheatSheet: 88536eccaa3d994a8300063ea4b9cfc245561df5
+CHECKOUT OPTIONS:
+  IRFEmojiCheatSheet:
+    :commit: 64e88041c99dd9517f0bb291bced29b50a726f0a
+    :git: git@github.com:neonichu/IRFEmojiCheatSheet.git
 
-COCOAPODS: 0.34.4
+SPEC CHECKSUMS:
+  IRFEmojiCheatSheet: 364b2733c4e37c65ef9f56225246cdf42068370f
+
+COCOAPODS: 0.39.0

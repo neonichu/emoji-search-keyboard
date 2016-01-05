@@ -21,12 +21,8 @@ class ExtraView: UIView {
         
         super.init(frame: CGRectZero)
     }
-    
-    required init(coder aDecoder: NSCoder) {
-        self.globalColors = nil
-        self.darkMode = false
-        self.solidColorMode = false
-        
-        super.init(coder: aDecoder)
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

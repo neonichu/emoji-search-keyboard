@@ -8,18 +8,18 @@
 
 import UIKit
 
-class EmojiBanner : BannerView {
+class EmojiBanner : ExtraView {
     var emojiBoard : EmojiBoard? = nil
     let scrollView : UIScrollView
 
-    required init(globalColors: GlobalColors.Type, darkMode: Bool, solidColorMode: Bool) {
+    required init(globalColors: GlobalColors.Type?, darkMode: Bool, solidColorMode: Bool) {
         scrollView = UIScrollView(frame: CGRectZero)
 
         super.init(globalColors: globalColors, darkMode: darkMode, solidColorMode: solidColorMode)
         self.addSubview(scrollView)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -41,7 +41,7 @@ class EmojiBanner : BannerView {
         var x : CGFloat = 0.0
 
         for match in matches {
-            let button : UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+            let button : UIButton = UIButton(type: UIButtonType.Custom) as UIButton
             button.addTarget(self, action: "emojiTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             button.frame = CGRect(x: x, y: 0.0, width: 44.0, height: self.frame.size.height)
             button.setTitle(match as? String, forState: UIControlState.Normal)
@@ -72,57 +72,57 @@ class EmojiBoard: KeyboardViewController {
     }
 
     func deleteCurrentWord() {
-        if let textDocumentProxy = self.textDocumentProxy as? UIKeyInput {
-            for i in 0..<countElements(currentWord) {
-                textDocumentProxy.deleteBackward()
-            }
+        let textDocumentProxy = self.textDocumentProxy
+        for _ in 0..<currentWord.characters.count {
+            textDocumentProxy.deleteBackward()
         }
     }
 
     func deleteLastCharacter() {
-        let stringLength = countElements(currentWord)
+        let stringLength = currentWord.characters.count
 
         if stringLength == 0 {
             return
         }
 
         let substringIndex = stringLength - 1
-        currentWord = currentWord.substringToIndex(advance(currentWord.startIndex, substringIndex))
+        currentWord = currentWord.substringToIndex(currentWord.startIndex.advancedBy(substringIndex))
     }
 
     func insertWord(word:String) {
-        if let textDocumentProxy = self.textDocumentProxy as? UIKeyInput {
-            textDocumentProxy.insertText(word)
-            textDocumentProxy.insertText(" ")
+        let textDocumentProxy = self.textDocumentProxy
+        textDocumentProxy.insertText(word)
+        textDocumentProxy.insertText(" ")
 
-            currentWord = ""
-        }
+        currentWord = ""
+
     }
 
     override func keyPressed(key: Key) {
-        if let textDocumentProxy = self.textDocumentProxy as? UIKeyInput {
-            var currentChar = key.outputForCase(self.shiftState.uppercase())
-            textDocumentProxy.insertText(currentChar)
+        let textDocumentProxy = self.textDocumentProxy
+        let currentChar = key.outputForCase(self.shiftState.uppercase())
+        textDocumentProxy.insertText(currentChar)
 
-            if currentChar == " " {
-                deleteCurrentWord()
-                textDocumentProxy.deleteBackward()
+        if currentChar == " " {
+            deleteCurrentWord()
+            textDocumentProxy.deleteBackward()
 
-                let repl = IRFEmojiCheatSheet.stringByReplacingEmojiAliasesInString(currentWord)
-                insertWord(repl)
-            } else {
-                currentWord += currentChar
-            }
-
-            updateBanner()
+            let repl = IRFEmojiCheatSheet.stringByReplacingEmojiAliasesInString(currentWord)
+            insertWord(repl)
+        } else {
+            currentWord += currentChar
         }
+
+        updateBanner()
     }
 
     func updateBanner() {
-        let banner = self.bannerView as EmojiBanner
+        let banner = self.bannerView as! EmojiBanner
         banner.emojiBoard = self
         banner.update(currentWord)
     }
 
-    override class var bannerClass: BannerView.Type { get { return EmojiBanner.self }}
+    override func createBanner() -> ExtraView? {
+        return EmojiBanner(globalColors: self.dynamicType.globalColors, darkMode: false, solidColorMode: self.solidColorMode())
+    }
 }

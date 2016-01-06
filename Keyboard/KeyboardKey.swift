@@ -271,10 +271,7 @@ class KeyboardKey: UIControl {
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         
-        if let popup = self.popup {
-            self.shadowLayer.shadowPath = shadowPath.CGPath
-        }
-        
+        self.shadowLayer.shadowPath = shadowPath.CGPath
         self.underView?.curve = underPath
         self.displayView.curve = testPath
         self.borderView?.curve = edgePath

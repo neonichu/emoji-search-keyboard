@@ -9,10 +9,7 @@
 import UIKit
 import AudioToolbox
 
-let metrics: [String:Double] = [
-    "topBanner": 30
-]
-func metric(name: String) -> CGFloat { return CGFloat(metrics[name]!) }
+let TOPBANNER_HEIGHT = CGFloat(50)
 
 // TODO: move this somewhere else and localize
 let kAutoCapitalization = "kAutoCapitalization"
@@ -224,7 +221,7 @@ class KeyboardViewController: UIInputViewController {
             self.setupKeys()
         }
         
-        self.bannerView?.frame = CGRectMake(0, 0, self.view.bounds.width, metric("topBanner"))
+        self.bannerView?.frame = CGRectMake(0, 0, self.view.bounds.width, TOPBANNER_HEIGHT)
         
         let newOrigin = CGPointMake(0, self.view.bounds.height - self.forwardingView.bounds.height)
         self.forwardingView.frame.origin = newOrigin
@@ -276,7 +273,7 @@ class KeyboardViewController: UIInputViewController {
         let actualScreenWidth = (UIScreen.mainScreen().nativeBounds.size.width / UIScreen.mainScreen().nativeScale)
         let canonicalPortraitHeight = (isPad ? CGFloat(264) : CGFloat(orientation.isPortrait && actualScreenWidth >= 400 ? 226 : 216))
         let canonicalLandscapeHeight = (isPad ? CGFloat(352) : CGFloat(162))
-        let topBannerHeight = (withTopBanner ? metric("topBanner") : 0)
+        let topBannerHeight = (withTopBanner ? TOPBANNER_HEIGHT : 0)
         
         return CGFloat(orientation.isPortrait ? canonicalPortraitHeight + topBannerHeight : canonicalLandscapeHeight + topBannerHeight)
     }

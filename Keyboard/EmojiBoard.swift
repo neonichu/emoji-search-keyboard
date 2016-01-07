@@ -48,6 +48,7 @@ class EmojiBanner : ExtraView {
             button.addTarget(self, action: "emojiTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             button.frame = CGRect(x: x, y: 0.0, width: 44.0, height: self.frame.size.height)
             button.setTitle(match, forState: UIControlState.Normal)
+            button.titleLabel?.font = UIFont.systemFontOfSize(30)
             scrollView.addSubview(button)
 
             x += button.frame.size.width + 5.0

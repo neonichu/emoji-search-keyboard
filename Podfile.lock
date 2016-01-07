@@ -1,19 +1,32 @@
 PODS:
+  - Emoji (0.0.1):
+    - STRegex (< 1.0.0, >= 0.0.0)
   - IRFEmojiCheatSheet (0.3.0)
+  - STRegex (0.3.0)
 
 DEPENDENCIES:
-  - IRFEmojiCheatSheet (from `git@github.com:neonichu/IRFEmojiCheatSheet.git`)
+  - Emoji (from `https://github.com/neonichu/electronic-moji.git`)
+  - IRFEmojiCheatSheet (from `https://github.com/neonichu/IRFEmojiCheatSheet.git`)
 
 EXTERNAL SOURCES:
+  Emoji:
+    :git: https://github.com/neonichu/electronic-moji.git
   IRFEmojiCheatSheet:
-    :git: git@github.com:neonichu/IRFEmojiCheatSheet.git
+    :git: https://github.com/neonichu/IRFEmojiCheatSheet.git
 
 CHECKOUT OPTIONS:
+  Emoji:
+    :commit: 8842083801beae35e3f8176718b95dcc1a9c8884
+    :git: https://github.com/neonichu/electronic-moji.git
   IRFEmojiCheatSheet:
     :commit: 64e88041c99dd9517f0bb291bced29b50a726f0a
-    :git: git@github.com:neonichu/IRFEmojiCheatSheet.git
+    :git: https://github.com/neonichu/IRFEmojiCheatSheet.git
 
 SPEC CHECKSUMS:
-  IRFEmojiCheatSheet: 364b2733c4e37c65ef9f56225246cdf42068370f
+  Emoji: 4eaaad730efccc3dcf53547a8e0c60408a067ebc
+  IRFEmojiCheatSheet: dfce726d11d912b0ba074000d55f262239ae3ea3
+  STRegex: 5e12f6376da1ec945689fb693cf18dcf663b7190
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: e3b4cd47200369ae57aa9a16ad63c933e5e720f3
+
+COCOAPODS: 1.0.0.beta.2

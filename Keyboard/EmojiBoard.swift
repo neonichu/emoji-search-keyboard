@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Apple. All rights reserved.
 //
 
+import Emoji
+import IRFEmojiCheatSheet
 import UIKit
 
 class EmojiBanner : ExtraView {
@@ -31,7 +33,8 @@ class EmojiBanner : ExtraView {
     }
 
     func update(currentWord:String) {
-        let matches = IRFEmojiCheatSheet.emojisForPrefix(currentWord)
+        let word = currentWord.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).lowercaseString
+        let matches = Set((IRFEmojiCheatSheet.emojisForPrefix(word) + EMOJI.findUnicodeName(word).map { "\($0)" }).flatMap { $0 as? String }.prefix(10))
 
         scrollView.frame = self.bounds
         for subview in scrollView.subviews {
@@ -44,7 +47,7 @@ class EmojiBanner : ExtraView {
             let button : UIButton = UIButton(type: UIButtonType.Custom) as UIButton
             button.addTarget(self, action: "emojiTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             button.frame = CGRect(x: x, y: 0.0, width: 44.0, height: self.frame.size.height)
-            button.setTitle(match as? String, forState: UIControlState.Normal)
+            button.setTitle(match, forState: UIControlState.Normal)
             scrollView.addSubview(button)
 
             x += button.frame.size.width + 5.0

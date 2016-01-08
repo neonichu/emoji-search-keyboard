@@ -410,6 +410,7 @@
 					};
 					4E807DB819461DC700D875D1 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = RWJ5E97L7R;
 					};
 					4E8EF38019F95D74009CBF5D = {
 						CreatedOnToolsVersion = 6.1;
@@ -704,10 +705,13 @@
 			baseConfigurationReference = 18D690CD6E3B5D8C72AD63E8 /* Pods-Keyboard.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Archagon.HostingApp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Keyboard;
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = Keyboard/BridgingHeader.h;
 			};
@@ -718,10 +722,13 @@
 			baseConfigurationReference = 82AFA618DAE1CAE6C6CCDEBF /* Pods-Keyboard.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Archagon.HostingApp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Keyboard;
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = Keyboard/BridgingHeader.h;
 			};

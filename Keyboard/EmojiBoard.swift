@@ -10,6 +10,11 @@ import Emoji
 import IRFEmojiCheatSheet
 import UIKit
 
+private func matchingEmoji(currentWord: String) -> Set<String> {
+    let word = currentWord.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).lowercaseString
+    return Set((IRFEmojiCheatSheet.emojisForPrefix(word) + EMOJI.findUnicodeName(word).map { "\($0)" }).flatMap { $0 as? String }.prefix(10))
+}
+
 class EmojiBanner : ExtraView {
     var emojiBoard : EmojiBoard? = nil
     let scrollView : UIScrollView
@@ -33,8 +38,7 @@ class EmojiBanner : ExtraView {
     }
 
     func update(currentWord:String) {
-        let word = currentWord.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).lowercaseString
-        let matches = Set((IRFEmojiCheatSheet.emojisForPrefix(word) + EMOJI.findUnicodeName(word).map { "\($0)" }).flatMap { $0 as? String }.prefix(10))
+        let matches = matchingEmoji(currentWord)
 
         scrollView.frame = self.bounds
         for subview in scrollView.subviews {
@@ -111,8 +115,9 @@ class EmojiBoard: KeyboardViewController {
             deleteCurrentWord()
             textDocumentProxy.deleteBackward()
 
-            let repl = IRFEmojiCheatSheet.stringByReplacingEmojiAliasesInString(currentWord)
-            insertWord(repl)
+            if let repl = matchingEmoji(currentWord).first where NSUserDefaults.standardUserDefaults().boolForKey(kAutoCompleteEmoji) {
+                insertWord(repl)
+            }
         } else {
             currentWord += currentChar
         }

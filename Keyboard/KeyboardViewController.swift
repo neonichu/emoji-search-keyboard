@@ -16,6 +16,7 @@ let kAutoCapitalization = "kAutoCapitalization"
 let kPeriodShortcut = "kPeriodShortcut"
 let kKeyboardClicks = "kKeyboardClicks"
 let kSmallLowercase = "kSmallLowercase"
+let kAutoCompleteEmoji = "kAutoCompleteEmoji"
 
 class KeyboardViewController: UIInputViewController {
     
@@ -95,7 +96,8 @@ class KeyboardViewController: UIInputViewController {
             kAutoCapitalization: true,
             kPeriodShortcut: true,
             kKeyboardClicks: false,
-            kSmallLowercase: false
+            kSmallLowercase: false,
+            kAutoCompleteEmoji: true
         ])
         
         self.keyboard = defaultKeyboard()

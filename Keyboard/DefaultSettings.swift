@@ -34,7 +34,7 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
         get {
             return [
                 ("General Settings", [kAutoCapitalization, kPeriodShortcut, kKeyboardClicks]),
-                ("Extra Settings", [kSmallLowercase])
+                ("Extra Settings", [kAutoCompleteEmoji, kSmallLowercase])
             ]
         }
     }
@@ -44,6 +44,7 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
                 kAutoCapitalization: "Auto-Capitalization",
                 kPeriodShortcut:  "“.” Shortcut",
                 kKeyboardClicks: "Keyboard Clicks",
+                kAutoCompleteEmoji: "Auto-Complete Emoji",
                 kSmallLowercase: "Allow Lowercase Key Caps"
             ]
         }

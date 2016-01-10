@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nAo-DR-8Pl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nAo-DR-8Pl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IC3-rM-66w">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xea-iY-wvs">
-                                <rect key="frame" x="238" y="20" width="124" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xea-iY-wvs">
+                                <rect key="frame" x="238" y="20" width="123" height="30"/>
                                 <state key="normal" title="Dismiss Keyboard">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,44 +31,58 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jto-Fw-99T">
-                                <rect key="frame" x="16" y="58" width="568" height="30"/>
+                                <rect key="frame" x="20" y="58" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dark Mode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIN-qD-YPT">
-                                <rect key="frame" x="16" y="96" width="568" height="30"/>
+                                <rect key="frame" x="20" y="96" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Caps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sv9-QE-0tf">
-                                <rect key="frame" x="16" y="134" width="568" height="30"/>
+                                <rect key="frame" x="20" y="134" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sentence Caps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkG-lS-E73">
-                                <rect key="frame" x="16" y="172" width="568" height="30"/>
+                                <rect key="frame" x="20" y="172" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="All Caps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-oU-7aO">
-                                <rect key="frame" x="16" y="210" width="568" height="30"/>
+                                <rect key="frame" x="20" y="210" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Waiting for keyboard...)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-47-LNQ">
-                                <rect key="frame" x="209" y="248" width="182" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Waiting for keyboard...)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-47-LNQ">
+                                <rect key="frame" x="208" y="248" width="183.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable the keyboard by adding it in Settings &gt; General &gt; Keyboard &gt; Keyboards &gt; Add" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET7-X6-qPm">
+                                <rect key="frame" x="20" y="277" width="560" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3b-NS-KGm">
+                                <rect key="frame" x="20" y="338" width="560" height="242"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jEi-oU-7aO" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leadingMargin" id="0fI-cc-CKa"/>
                             <constraint firstItem="JkG-lS-E73" firstAttribute="trailing" secondItem="aBi-zl-Xx9" secondAttribute="trailingMargin" id="1QW-qc-rHz"/>
+                            <constraint firstItem="j3b-NS-KGm" firstAttribute="centerY" secondItem="aBi-zl-Xx9" secondAttribute="centerY" id="1uh-yT-0D3"/>
                             <constraint firstItem="Jto-Fw-99T" firstAttribute="top" secondItem="xea-iY-wvs" secondAttribute="bottom" constant="8" id="2PO-BH-UYU"/>
                             <constraint firstAttribute="trailing" secondItem="IC3-rM-66w" secondAttribute="trailing" id="2Tb-f1-RXm"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="leading" secondItem="jEi-oU-7aO" secondAttribute="leading" id="2jS-5l-NnJ"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jEi-oU-7aO" secondAttribute="bottom" constant="20" id="5oW-jR-oZ3"/>
                             <constraint firstItem="IC3-rM-66w" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leading" id="6fk-Jg-LEU"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="centerX" secondItem="aBi-zl-Xx9" secondAttribute="centerX" id="6mR-gB-Jvm"/>
                             <constraint firstItem="Sv9-QE-0tf" firstAttribute="trailing" secondItem="aBi-zl-Xx9" secondAttribute="trailingMargin" id="ARH-fd-BD7"/>
                             <constraint firstItem="P06-La-EKF" firstAttribute="top" secondItem="IC3-rM-66w" secondAttribute="bottom" id="CAM-uD-RD7"/>
                             <constraint firstItem="IC3-rM-66w" firstAttribute="top" secondItem="aBi-zl-Xx9" secondAttribute="top" id="F9u-ma-0Be"/>
@@ -76,19 +91,41 @@
                             <constraint firstItem="zIN-qD-YPT" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leadingMargin" id="RS7-5Q-7dX"/>
                             <constraint firstAttribute="centerX" secondItem="xea-iY-wvs" secondAttribute="centerX" id="Tdh-Nc-qEN"/>
                             <constraint firstItem="jEi-oU-7aO" firstAttribute="top" secondItem="JkG-lS-E73" secondAttribute="bottom" constant="8" id="UAi-eO-fVu"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="bottom" secondItem="3bG-47-LNQ" secondAttribute="bottom" constant="50" id="UrJ-NN-paq"/>
+                            <constraint firstItem="P06-La-EKF" firstAttribute="top" secondItem="j3b-NS-KGm" secondAttribute="bottom" constant="20" id="WSA-K6-uVf"/>
                             <constraint firstItem="Sv9-QE-0tf" firstAttribute="top" secondItem="zIN-qD-YPT" secondAttribute="bottom" constant="8" id="WWr-KU-rPx"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jEi-oU-7aO" secondAttribute="trailing" constant="20" id="a44-Bn-Sy7"/>
+                            <constraint firstItem="j3b-NS-KGm" firstAttribute="leading" secondItem="jEi-oU-7aO" secondAttribute="leading" id="c4x-pZ-FCy"/>
                             <constraint firstItem="jEi-oU-7aO" firstAttribute="trailing" secondItem="aBi-zl-Xx9" secondAttribute="trailingMargin" id="cZg-Zj-bxo"/>
+                            <constraint firstItem="P06-La-EKF" firstAttribute="top" secondItem="j3b-NS-KGm" secondAttribute="bottom" id="dpM-WD-N8h"/>
+                            <constraint firstItem="j3b-NS-KGm" firstAttribute="trailing" secondItem="jEi-oU-7aO" secondAttribute="trailing" id="ed5-MU-F61"/>
+                            <constraint firstItem="j3b-NS-KGm" firstAttribute="top" secondItem="ET7-X6-qPm" secondAttribute="bottom" constant="20" id="fVI-Dv-KgB"/>
                             <constraint firstItem="Jto-Fw-99T" firstAttribute="trailing" secondItem="aBi-zl-Xx9" secondAttribute="trailingMargin" id="h6R-mk-5xj"/>
                             <constraint firstItem="Sv9-QE-0tf" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leadingMargin" id="hsX-fG-ejf"/>
                             <constraint firstItem="zIN-qD-YPT" firstAttribute="top" secondItem="Jto-Fw-99T" secondAttribute="bottom" constant="8" id="huJ-vL-ZtF"/>
                             <constraint firstAttribute="centerX" secondItem="3bG-47-LNQ" secondAttribute="centerX" constant="-0.5" id="iSm-MK-elT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ET7-X6-qPm" secondAttribute="trailing" constant="20" id="iU0-yR-nhW"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leadingMargin" constant="20" id="lJE-aU-xJb"/>
+                            <constraint firstItem="ET7-X6-qPm" firstAttribute="trailing" secondItem="jEi-oU-7aO" secondAttribute="trailing" id="n9m-1e-Fam"/>
+                            <constraint firstItem="j3b-NS-KGm" firstAttribute="bottom" secondItem="ET7-X6-qPm" secondAttribute="bottom" id="rIJ-kI-jkd"/>
                             <constraint firstItem="JkG-lS-E73" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leadingMargin" id="tu3-o3-Xrq"/>
                             <constraint firstItem="Jto-Fw-99T" firstAttribute="leading" secondItem="aBi-zl-Xx9" secondAttribute="leadingMargin" id="wXH-Yx-oBy"/>
                             <constraint firstItem="zIN-qD-YPT" firstAttribute="trailing" secondItem="aBi-zl-Xx9" secondAttribute="trailingMargin" id="wod-3F-kte"/>
                             <constraint firstItem="3bG-47-LNQ" firstAttribute="top" secondItem="jEi-oU-7aO" secondAttribute="bottom" constant="8" id="znP-aw-Mau"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a44-Bn-Sy7"/>
+                                <exclude reference="iU0-yR-nhW"/>
+                                <exclude reference="lJE-aU-xJb"/>
+                                <exclude reference="1uh-yT-0D3"/>
+                                <exclude reference="rIJ-kI-jkd"/>
+                                <exclude reference="dpM-WD-N8h"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="mediaContainerView" destination="j3b-NS-KGm" id="aFg-La-nZB"/>
                         <outlet property="stats" destination="3bG-47-LNQ" id="y0X-Tx-RE4"/>
                     </connections>
                 </viewController>

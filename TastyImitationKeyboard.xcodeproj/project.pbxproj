@@ -37,6 +37,7 @@
 		4EF16F9819D255030076AFCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF16F9519D255030076AFCB /* ViewController.swift */; };
 		4EF16F9B19D2550D0076AFCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */; };
 		4EF16F9F19D2552E0076AFCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF16F9D19D2552E0076AFCB /* Main.storyboard */; };
+		A1160E9F1C42D68D0008CA10 /* Tutorial.mov in Resources */ = {isa = PBXBuildFile; fileRef = A1160E9E1C42D68D0008CA10 /* Tutorial.mov */; };
 		A1D091EA19FBD82D00DE10E1 /* EmojiBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D091E919FBD82D00DE10E1 /* EmojiBoard.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,7 @@
 		4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF16F9E19D2552E0076AFCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		82AFA618DAE1CAE6C6CCDEBF /* Pods-Keyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keyboard/Pods-Keyboard.release.xcconfig"; sourceTree = "<group>"; };
+		A1160E9E1C42D68D0008CA10 /* Tutorial.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tutorial.mov; sourceTree = "<group>"; };
 		A1D091E919FBD82D00DE10E1 /* EmojiBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiBoard.swift; sourceTree = "<group>"; };
 		A1D091EB19FBDC6800DE10E1 /* Foo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Foo.playground; sourceTree = "<group>"; };
 		F2E5E985E2E34E6238F89FC0 /* Pods_Keyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +248,7 @@
 				4EF16F9519D255030076AFCB /* ViewController.swift */,
 				4EF16F9D19D2552E0076AFCB /* Main.storyboard */,
 				4EF16F9319D255030076AFCB /* Images.xcassets */,
+				A1160E9E1C42D68D0008CA10 /* Tutorial.mov */,
 				4E807D9619461D9000D875D1 /* Supporting Files */,
 				A1D091EB19FBDC6800DE10E1 /* Foo.playground */,
 			);
@@ -440,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1160E9F1C42D68D0008CA10 /* Tutorial.mov in Resources */,
 				4EF16F9619D255030076AFCB /* Images.xcassets in Resources */,
 				4EF16F9F19D2552E0076AFCB /* Main.storyboard in Resources */,
 				4EF16F9119D254E00076AFCB /* Background.jpg in Resources */,

@@ -6,19 +6,44 @@
 //  Copyright (c) 2014 Apple. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class HostingAppViewController: UIViewController {
     
+    @IBOutlet weak var mediaContainerView: UIView!
     @IBOutlet var stats: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let url = NSBundle.mainBundle().URLForResource("Tutorial", withExtension: "mov") {
+            let player = AVPlayer(URL: url)
+            let playerLayer = AVPlayerLayer(player: player)
+            mediaContainerView.layer.addSublayer(playerLayer)
+
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("playerItemEnded:"), name: AVPlayerItemDidPlayToEndTimeNotification, object: player.currentItem)
+
+            player.actionAtItemEnd = .None
+            player.play()
+        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow"), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidHide"), name: UIKeyboardDidHideNotification, object: nil)
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillChangeFrame:"), name: UIKeyboardWillChangeFrameNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidChangeFrame:"), name: UIKeyboardDidChangeFrameNotification, object: nil)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        mediaContainerView.layer.sublayers?.first?.frame = mediaContainerView.bounds
+    }
+
+    private dynamic func playerItemEnded(note: NSNotification) {
+        if let item = note.object as? AVPlayerItem {
+            item.seekToTime(kCMTimeZero)
+        }
     }
 
     override func didReceiveMemoryWarning() {
